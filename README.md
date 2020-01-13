@@ -11,6 +11,12 @@ TypeScript 练习工程，两周任务，必须结束。每天花20分钟总结�
         - `import { foo } from './foo';
            const bar = foo; // allow`
         - 在 bar.ts 文件里使用 import，不但允许你使用从其他文件导入的内容，而且它会将此文件 bar.ts 标记为一个模块，文件内定义的声明也不会污染全局命名空间。
+        - commonjs, amd, es modules, others
+            - AMD：不要使用它，它仅能在浏览器工作；
+            - SystemJS：这是一个好的实验，已经被 ES 模块替代；
+            - ES 模块：它并没有准备好。
+        - 标准写法：`import {a,b} from './xxx';` 需要注意的地方是
+            - 你也可以重命名变量导出：`import {a as a1} from 'modelA'`
     
 - TypeScript 类型系统
 - JSX
