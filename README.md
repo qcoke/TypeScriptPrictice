@@ -1,4 +1,7 @@
 # TypeScriptPrictice
+
+---
+
 TypeScript 练习工程，两周任务，必须结束。每天花20分钟总结一下。
 - TypeScript 介绍
     - 编译上下文和配置
@@ -28,10 +31,18 @@ TypeScript 练习工程，两周任务，必须结束。每天花20分钟总结�
                 - 如果这个 place 表示一个文件，如：foo.ts！
                 - 否则，如果这个 place 是一个文件夹，并且存在一个文件 foo/index.ts
                 - 否则，如果这个 place 是一个文件夹，并且存在一个 foo/package.json 文件，在该文件中指定 types 的文件存在
-                - 否则，如果这个 place 是一个文件夹，并且存在一个 package.json 文件，在该文件中指定 main 的文件存在，那么就欢呼
+                - 否则，如果这个 place 是一个文件夹，并且存在一个 package.json 文件，在该文件中指定 main 的文件存在，那么就欢呼！
             - 声明全局模块的方式：declare module 'somePath'
+                - ```declare``` 代表的就是一个全局的模块声明，用于解决路径查找的问题。比如 jQuery 已经通过 html script 的方式导入。
             - 至于模块的导入导出，我想就不用我多介绍了，基本上都是照搬 ES2015 的语法，导入、导出、重命名、仅导入模块、指定加载某个输出值等等...
             - import/require 仅仅是导入类型，如果没有当成变量使用，那么它在编译的时候会被丢弃
+                - ```javascript
+                  import a from "a"
+                  ```
+                  会直接变成
+                  ```javascript
+                  // 什么都没有
+                  ```
 - TypeScript 类型系统
 - JSX
 - TypeScript 异常

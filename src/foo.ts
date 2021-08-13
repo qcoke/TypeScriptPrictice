@@ -1,4 +1,8 @@
-export const someVar = 123;
-export type someType = {
-    foo: string;
-}
+// 联合类型
+let sexType : "body" | "girl";
+sexType = "body"
+console.log("===>", sexType);
+
+
+
+

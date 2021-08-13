@@ -2,5 +2,10 @@
     // 编译文件
     "include": ["./src"],
     // 排除文件
-    "exclude": []
+    "exclude": [],
+    // 编译项
+    "compilerOptions": {
+        "target": "ES5",
+        "removeComments": true
+    }
 }
