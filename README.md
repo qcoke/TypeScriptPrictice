@@ -82,9 +82,10 @@ TypeScript 练习工程，两周任务，必须结束。每天花20分钟总结�
             console.log("boolArray[0]:", boolArray[0]);
             console.log("boolArray[1]:", boolArray[1]);
             ```
-        - 接口
+        - 接口 && 内联类型注解
             - 接口是 TypeScript 的一个核心知识，它能合并众多类型声明至一个类型声明：
               ```javascript
+              // 接口
               interface name {
                   first: string;
                   second: string;
@@ -95,7 +96,23 @@ TypeScript 练习工程，两周任务，必须结束。每天花20分钟总结�
                   second: "jordan"
               }
               console.log("peoplea is:", peoplea);
+              
+              // 内联类型注解
+              let name: {
+                first: string;
+                second: string;
+              };
+              name = {
+                first: 'John',
+                second: 'Doe'
+              };
+              
+              name = {
+                // Error: 'Second is missing'
+                first: 'John'
+              };
               ```
+              内联类型能为你快速的提供一个类型注解。它可以帮助你省去为类型起名的麻烦。然而，如果你发现需要多次使用相同的内联注解时，那么考虑把它重构为一个接口（或者是 type alias，它会在接下来的部分提到）是一个不错的主意。
 - JSX
 - TypeScript 异常
 - TIPS 笔记
