@@ -43,7 +43,59 @@ TypeScript 练习工程，两周任务，必须结束。每天花20分钟总结�
                   ```javascript
                   // 什么都没有
                   ```
+    - global.d.ts
+        - 我们比较了全局变量和文件模块，并且我们推荐使用基于文件的模块，而不是选择污染全局命名空间。
+        - 用来将一些接口或者类型放入全局命名空间里，这些定义的接口和类型能在你的所有 TypeScript 代码里使用。
+        - ```javascript
+            declare namespace API {
+                type UserObject = {
+                    user_name: string;
+                    pass_word: string;
+                    email: string;
+                    created_at: string;
+                };
+            }
+          ```
+        - 这种常用的 Data Transfer Object，在函数与函数，Fetch请求参数传值之间用于规范前后端传输格式是最好的应用场景。
 - TypeScript 类型系统
+    - TypeScript 类型
+        - 基本注解，如前文所提及，类型注解使用 :TypeAnnotation 语法。在类型声明空间中可用的任何内容都可以用作类型注解。
+        JavaScript 原始类型也同样适应于 TypeScript 的类型系统，因此 string、number、boolean 也可以被用作类型注解：
+            ```javascript
+            function identity(num: number): number {
+                return num
+            }
+            
+            console.log("identity:", identity(118))
+            // 原始类型
+            let num: number;
+            let str: string;
+            let bool: boolean;
+            
+            num = 123;
+            str = "hello";
+            bool = true;
+            // 数组
+            let boolArray: boolean[];
+            
+            boolArray = [true, false];
+            console.log("boolArray[0]:", boolArray[0]);
+            console.log("boolArray[1]:", boolArray[1]);
+            ```
+        - 接口
+            - 接口是 TypeScript 的一个核心知识，它能合并众多类型声明至一个类型声明：
+              ```javascript
+              interface name {
+                  first: string;
+                  second: string;
+              }
+              
+              let peoplea: name = {
+                  first: "michael",
+                  second: "jordan"
+              }
+              console.log("peoplea is:", peoplea);
+              ```
 - JSX
 - TypeScript 异常
 - TIPS 笔记
